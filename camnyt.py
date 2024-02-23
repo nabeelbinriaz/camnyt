@@ -10,7 +10,7 @@ app.add_middleware(
     allow_methods=["*"],  # Allows all methods
     allow_headers=["*"],  # Allows all headers
 )
-
+openai_api_key = os.environ.get("OPENAI_API_KEY")
 def gpt(query):
   URL = "https://api.openai.com/v1/chat/completions"
   data='''
@@ -59,7 +59,7 @@ def gpt(query):
 
   headers = {
   "Content-Type": "application/json",
-  "Authorization": "Bearer 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"
+  "Authorization": f"Bearer {open_api_key}"
   }
 
   response = requests.post(URL, headers=headers, json=payload, stream=False)
