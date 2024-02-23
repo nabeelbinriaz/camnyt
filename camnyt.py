@@ -59,7 +59,7 @@ def gpt(query):
 
   headers = {
   "Content-Type": "application/json",
-  "Authorization": "Bearer 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"
+  "Authorization": "Bearer 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"
   }
 
   response = requests.post(URL, headers=headers, json=payload, stream=False)
